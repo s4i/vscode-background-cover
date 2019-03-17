@@ -64,6 +64,37 @@
                     "type": "string",
                     "default": "",
                     "description": "Background image's folder path for random / 随机图片的文件夹路径"
+                },
+                "backgroundCover.position": {
+                    "type": "string",
+                    "enum": [
+                        "top",
+                        "bottom",
+                        "left",
+                        "right",
+                        "center"
+                    ],
+                    "default": "top",
+                    "description": "Background image position / 背景图像位置"
+                },
+                "backgroundCover.repeat": {
+                    "type": "string",
+                    "enum": [
+                        "no-repeat",
+                        "repeat"
+                    ],
+                    "default": "no-repeat",
+                    "description": "Background image repeat / 背景图像重复"
+                },
+                "backgroundCover.size": {
+                    "type": "string",
+                    "enum": [
+                        "cover",
+                        "contain",
+                        "100vw 100vh"
+                    ],
+                    "default": "cover",
+                    "description": "Background image size / 背景图片大小"
                 }
             }
         }

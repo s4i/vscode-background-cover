@@ -19,13 +19,19 @@ export default function (config: any, extName: string, version: string): string 
 	//opacity = 0.89 + (0.1 - (opacity / 10));  0.1--0.98
 	opacity = 0.62 + (0.4 - ((opacity*4) / 10));
 
+	let position: string = config.position;
+	let repeat: string = config.repeat;
+	let size: string = config.size;
+
 	return `
 	/*ext-${extName}-start*/
 	/*ext.${extName}.ver.${version}*/
 	body{
-		background-size:cover;
 		opacity:${opacity};
 		background-image:url('${imagePath}');
+		background-position:${position};
+		background-repeat:${repeat};
+		background-size:${size};
 	}
 	/*ext-${extName}-end*/
 	`;
